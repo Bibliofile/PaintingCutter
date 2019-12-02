@@ -1,0 +1,23 @@
+label {
+  font-weight: bold;
+}
+
+label, button {
+  display: block;
+  margin: 0.5em;
+}
+
+canvas {
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.workCanvas {
+  display: none;
+}
+
+.output-image {
+  margin: 5px;
+  border: 1px solid black;
+  display: block;
+}

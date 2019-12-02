@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BH Painting Cutter</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <noscript>
+      <h1>This won't work without JavaScript.</h1>
+    </noscript>
+
+    <h3>Options</h3>
+
+    <label>
+      Choose an image:
+      <input type="file" accept="image/*" id="input-image">
+    </label>
+
+    <label>
+      Width in blocks:
+      <input type="number" min="1" value="5" id="input-width">
+    </label>
+
+    <label>
+      Height in blocks:
+      <input type="number" min="1" value="2" id="input-height">
+    </label>
+
+    <label>
+      Scale (percent)
+      <input type="number" min="1" max="100" value="100" id="input-scale">
+    </label>
+
+    <label>
+      Painting offset (x)
+      <input type="number" min="0" value="0" id="input-offset-x">
+    </label>
+
+    <label>
+      Painting offset (y)
+      <input type="number" min="0" value="0" id="input-offset-y">
+    </label>
+
+    <button>Split image</button>
+
+    <h3>Preview</h3>
+    <canvas id="preview"></canvas>
+    <canvas id="work-item" class="workCanvas"></canvas>
+
+    <h3>Output</h3>
+    <div id="output"></div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
