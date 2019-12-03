@@ -113,13 +113,19 @@ document.querySelector('button')!.addEventListener('click', () => {
       0, 0, w * blockPixels, h * blockPixels
     )
 
+    const column = document.createElement('div')
+    column.classList.add('column')
+
     const label = document.createElement('strong')
     label.textContent = `Painting ${++count}`
-    output.appendChild(label)
+    column.appendChild(label)
+
     const item = new Image()
     item.src = workItem.toDataURL()
     item.classList.add('output-image')
-    output.appendChild(item)
+    column.appendChild(item)
+
+    output.appendChild(column)
   }
 
 })
