@@ -1,6 +1,8 @@
 import { tile } from './tile'
 
+const fileButton = document.querySelector('#file-button') as HTMLDivElement
 const fileInput = document.querySelector('#input-image') as HTMLInputElement
+const splitButton = document.querySelector('#split-button') as HTMLButtonElement
 const widthInput = document.querySelector('#input-width') as HTMLInputElement
 const heightInput = document.querySelector('#input-height') as HTMLInputElement
 const scaleInput = document.querySelector('#input-scale') as HTMLInputElement
@@ -40,6 +42,8 @@ let image = new Image()
 
 // Previously was input, but change also works on WebKit, Gecko, and older versions of Blink.
 fileInput.addEventListener('change', () => {
+  fileButton.classList.add('is-hidden')
+  splitButton.disabled = false
   const file = fileInput.files![0]
   const reader = new FileReader()
 
