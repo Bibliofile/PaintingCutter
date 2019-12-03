@@ -38,7 +38,8 @@ for (const el of [widthInput, heightInput, scaleInput]) {
 // and 1x1 paintings to form the whole painting.
 let image = new Image()
 
-fileInput.addEventListener('input', () => {
+// Previously was input, but change also works on WebKit, Gecko, and older versions of Blink.
+fileInput.addEventListener('change', () => {
   const file = fileInput.files![0]
   const reader = new FileReader()
 
