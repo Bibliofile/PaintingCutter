@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BH Painting Cutter</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <noscript>
-      <h1>This won't work without JavaScript.</h1>
-    </noscript>
 
-    <h3>Options</h3>
+<head>
+  <title>BH Painting Cutter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <label>
-      Choose an image:
-      <input type="file" accept="image/*" id="input-image">
-    </label>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <noscript>
+          <h1>This won't work without JavaScript.</h1>
+        </noscript>
+        <div class="columns">
+          <div class="column is-narrow">
+            <h3>Options</h3>
 
-    <label>
-      Width in blocks:
-      <input type="number" min="1" value="5" id="input-width">
-    </label>
+            <div class="field">
+              <div class="file is-boxed">
+                <label class="file-label fullwidth">
+                  <input class="file-input" type="file" accept="image/*" id="input-image">
+                  <span class="file-cta">
+                    <span class="file-label">
+                      Choose an image...
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
 
-    <label>
-      Height in blocks:
-      <input type="number" min="1" value="2" id="input-height">
-    </label>
+            <div class="field">
+              <label class="label">Width in blocks</label>
+              <div class="control">
+                <input class="input" type="number" min="1" value="5" id="input-width">
+              </div>
+            </div>
 
-    <label>
-      Scale (percent)
-      <input type="number" min="1" max="100" value="100" id="input-scale">
-    </label>
+            <div class="field">
+              <label class="label">Height in blocks</label>
+              <div class="control">
+                <input class="input" type="number" min="1" value="2" id="input-height">
+              </div>
+            </div>
 
-    <label>
-      Painting offset (x)
-      <input type="number" min="0" value="0" id="input-offset-x">
-    </label>
+            <div class="field">
+              <label class="label">Scale (percent)</label>
+              <div class="control">
+                <input class="input" type="number" min="1" max="100" value="100" id="input-scale">
+              </div>
+            </div>
 
-    <label>
-      Painting offset (y)
-      <input type="number" min="0" value="0" id="input-offset-y">
-    </label>
+            <div class="field">
+              <label class="label">Painting offset (x)</label>
+              <div class="control">
+                <input class="input" type="number" min="0" value="0" id="input-offset-x">
+              </div>
+            </div>
 
-    <button>Split image</button>
+            <div class="field">
+              <label class="label">Painting offset (y)</label>
+              <div class="control">
+                <input class="input" type="number" min="0" value="0" id="input-offset-y">
+              </div>
+            </div>
 
-    <h3>Preview</h3>
-    <canvas id="preview"></canvas>
-    <canvas id="work-item" class="workCanvas"></canvas>
+            <div class="field">
+              <div class="control">
+                <button class="button is-primary fullwidth">Split image</button>
+              </div>
+            </div>
 
-    <h3>Output</h3>
-    <div id="output"></div>
+          </div>
 
-    <script src="bundle.js"></script>
-  </body>
+          <div class="column">
+            <h3>Preview</h3>
+            <canvas id="preview" height="0"></canvas>
+            <canvas id="work-item" class="workCanvas"></canvas>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>Output</h3>
+          <div id="output" class="columns is-multiline is-vcentered"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="bundle.js"></script>
+</body>
+
 </html>
