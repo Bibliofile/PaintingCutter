@@ -42,7 +42,7 @@ let image = new Image()
 
 // Previously was input, but change also works on WebKit, Gecko, and older versions of Blink.
 fileInput.addEventListener('change', () => {
-  fileButton.classList.add('is-hidden')
+  fileButton.classList.remove('is-primary')
   splitButton.disabled = false
   const file = fileInput.files![0]
   const reader = new FileReader()
